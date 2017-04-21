@@ -1,0 +1,3010 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://github.com/Sage/streamlinejs">streamline (v2.0.19)</a>
+</h1>
+<h4>Asynchronous Javascript for dummies</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline">module streamline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.register">
+            function <span class="apidocSignatureSpan">streamline.</span>register
+            <span class="apidocSignatureSpan">(apiOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.run">
+            function <span class="apidocSignatureSpan">streamline.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.transform">
+            function <span class="apidocSignatureSpan">streamline.</span>transform
+            <span class="apidocSignatureSpan">(source, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.transformFileSync">
+            function <span class="apidocSignatureSpan">streamline.</span>transformFileSync
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>cacheSync</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>command</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>flows</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>globals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>repl</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>sourceMaps</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>transformSync</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.cacheSync">module streamline.cacheSync</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.cacheSync.get">
+            function <span class="apidocSignatureSpan">streamline.cacheSync.</span>get
+            <span class="apidocSignatureSpan">(path, options, transform)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.command">module streamline.command</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.command.run">
+            function <span class="apidocSignatureSpan">streamline.command.</span>run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.flows">module streamline.flows</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.apply">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>apply
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.callWithTimeout">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>callWithTimeout
+            <span class="apidocSignatureSpan">(cb, fn, millis)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.check">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>check
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.collect">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>collect
+            <span class="apidocSignatureSpan">(a1, a2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.each">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>each
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.eachKey">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>eachKey
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.eventHandler">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>eventHandler
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.every">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>every
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.filter">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>filter
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.funnel">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>funnel
+            <span class="apidocSignatureSpan">(max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.getContext">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>getContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.handshake">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>handshake
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.ignore">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>ignore
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.map">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>map
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.nextTick">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>nextTick
+            <span class="apidocSignatureSpan">(a1)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.queue">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>queue
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.reduce">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>reduce
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.reduceRight">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>reduceRight
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.setContext">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>setContext
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.setImmediate">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>setImmediate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.setInterval">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>setInterval
+            <span class="apidocSignatureSpan">(fn, millis)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.setTimeout">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>setTimeout
+            <span class="apidocSignatureSpan">(fn, millis)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.sleep">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>sleep
+            <span class="apidocSignatureSpan">(a1, a2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.some">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>some
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.sort">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>sort
+            <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.spray">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>spray
+            <span class="apidocSignatureSpan">(fns, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.trampoline">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>trampoline
+            <span class="apidocSignatureSpan">(cb, fn, thisObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.wait">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>wait
+            <span class="apidocSignatureSpan">(a1, a2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.flows.withContext">
+            function <span class="apidocSignatureSpan">streamline.flows.</span>withContext
+            <span class="apidocSignatureSpan">(fn, cx)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.globals">module streamline.globals</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.globals.withContext">
+            function <span class="apidocSignatureSpan">streamline.globals.</span>withContext
+            <span class="apidocSignatureSpan">(fn, cx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">streamline.globals.</span>context</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">streamline.globals.</span>runtime</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.repl">module streamline.repl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.repl.run">
+            function <span class="apidocSignatureSpan">streamline.repl.</span>run
+            <span class="apidocSignatureSpan">(prog, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.sourceMaps">module streamline.sourceMaps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.sourceMaps.get">
+            function <span class="apidocSignatureSpan">streamline.sourceMaps.</span>get
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.sourceMaps.put">
+            function <span class="apidocSignatureSpan">streamline.sourceMaps.</span>put
+            <span class="apidocSignatureSpan">(path, filename, map)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.transformSync">module streamline.transformSync</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.transformSync.transform">
+            function <span class="apidocSignatureSpan">streamline.transformSync.</span>transform
+            <span class="apidocSignatureSpan">(source, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.transformSync.transformFileSync">
+            function <span class="apidocSignatureSpan">streamline.transformSync.</span>transformFileSync
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.streamline.util">module streamline.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.babelOptions">
+            function <span class="apidocSignatureSpan">streamline.util.</span>babelOptions
+            <span class="apidocSignatureSpan">(options, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.cacheDir">
+            function <span class="apidocSignatureSpan">streamline.util.</span>cacheDir
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.canCompile">
+            function <span class="apidocSignatureSpan">streamline.util.</span>canCompile
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.deprecate">
+            function <span class="apidocSignatureSpan">streamline.util.</span>deprecate
+            <span class="apidocSignatureSpan">(module, message, redirected)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.envOptions">
+            function <span class="apidocSignatureSpan">streamline.util.</span>envOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.error">
+            function <span class="apidocSignatureSpan">streamline.util.</span>error
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.extend">
+            function <span class="apidocSignatureSpan">streamline.util.</span>extend
+            <span class="apidocSignatureSpan">(dst, src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.getOptions">
+            function <span class="apidocSignatureSpan">streamline.util.</span>getOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.idem">
+            function <span class="apidocSignatureSpan">streamline.util.</span>idem
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.log">
+            function <span class="apidocSignatureSpan">streamline.util.</span>log
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.removeShebang">
+            function <span class="apidocSignatureSpan">streamline.util.</span>removeShebang
+            <span class="apidocSignatureSpan">(code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.streamline.util.warn">
+            function <span class="apidocSignatureSpan">streamline.util.</span>warn
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline" id="apidoc.module.streamline">module streamline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.register" id="apidoc.element.streamline.register">
+        function <span class="apidocSignatureSpan">streamline.</span>register
+        <span class="apidocSignatureSpan">(apiOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (apiOptions) {
+	if (registered) return;
+	registered = true;
+
+	// apiOptions have priority over environment opptions (we don't combine them)
+	var options = util.getOptions(apiOptions || util.envOptions());
+
+	try {
+		var extensions = options.onlyExtensions || ['._js', '._coffee', '.ts'].concat(options.extensions || []);
+		// handle CoffeeScript first
+		if (extensions.indexOf('.coffee') &gt;= 0)
+			registerCoffee(options, '.coffee');
+		if (extensions.indexOf('._coffee') &gt;= 0)
+			registerCoffee(options, '._coffee');
+		if (extensions.indexOf('.js') &gt;= 0)
+			require.extensions['.js'] = requireHook(options, '.js');
+		// always register ._Js when compile option is true, because streamline needs it for itself.
+		if (options.compile || extensions.indexOf('._js') &gt;= 0)
+			require.extensions['._js'] = requireHook(options, '._js');
+		if (extensions.indexOf('.ts') &gt;= 0)
+			require.extensions['.ts'] = requireHook(options, '.ts');
+
+		// get globals to ensure requested runtime will be the default
+		require('streamline-runtime/lib/util').getGlobals(options.runtime);
+	} catch (ex) {
+		console.error(ex.stack);
+		throw ex;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+"use strict"
+require("./index").<span class="apidocCodeKeywordSpan">register</span>();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.run" id="apidoc.element.streamline.run">
+        function <span class="apidocSignatureSpan">streamline.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+	// require cluster here so that it gets process.argv before we shift it.
+	if (require('cluster').setupMaster) require('cluster').setupMaster();
+	var argv = process.argv;
+
+	var prog = /\w*$/.exec(argv[1])[0];
+
+	var options = parseOptions(argv);
+	register.register(options);
+	if (options.compile) {
+		require('./compile').compile(function(err) {
+			if (err) {
+				console.error(err.message + "\n" + err.stack);<span class="apidocCodeCommentSpan"> /* eslint-disable no-process-exit */
+</span>				process.exit(1);
+			}
+		}, options.args, options);		
+	} else if (options.args.length === 0) {
+		require("./repl").run(prog, options);
+	} else {
+		runScript(options);		
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		require('./compile').compile(function(err) {
+			if (err) {
+				console.error(err.message + "\n" + err.stack); /* eslint-disable no-process-exit */
+				process.exit(1);
+			}
+		}, options.args, options);		
+	} else if (options.args.length === 0) {
+		require("./repl").<span class="apidocCodeKeywordSpan">run</span>(prog, options);
+	} else {
+		runScript(options);		
+	}
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.transform" id="apidoc.element.streamline.transform">
+        function <span class="apidocSignatureSpan">streamline.</span>transform
+        <span class="apidocSignatureSpan">(source, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transform = function (source, options) {
+	var path = options.filename;
+	if (options.ignore &amp;&amp; path &amp;&amp; options.ignore(path)) {
+		return {
+			code: source,
+		};
+	}
+	if (!options.quiet) util.log("transforming (" + options.runtime + "): " + path);
+	var babelOptions = util.babelOptions(options, path);
+	var extHint = options.ext || path;
+	if (/\._?coffee$/.test(extHint)) {
+		var decaf = require('coffee-script').compile(source, {
+			sourceMap: true,
+			generatedFile: path.replace(/\._coffee$/, '.coffee'),
+			sourceFiles: [path],
+		});
+		if (/\.coffee$/.test(extHint)) {
+			return {
+				code: decaf.js,
+				map: JSON.parse(decaf.v3SourceMap),
+			};
+		}
+		babelOptions.inputSourceMap = JSON.parse(decaf.v3SourceMap);
+		return require('babel-core').transform(decaf.js, babelOptions);
+	} else if (/\.ts$/.test(extHint)) {
+		// use the typescript transpiler to strip type annotations
+		var transpiled = tsCompile(source, path, options);
+		// pass the result to babel (for streamline transform)
+		babelOptions.inputSourceMap = JSON.parse(transpiled.sourceMapText);
+		return require('babel-core').transform(transpiled.outputText, babelOptions);
+	} else {
+		return require('babel-core').transform(util.removeShebang(source), babelOptions);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			var vars = "";
+			if (decl) {
+				vars += "var " + decl[2] + ";";
+				if (decl[1] === "function") cmd = decl[2] + "=function " + decl[2] + decl[3];
+				else cmd = decl[2] + decl[3];
+			}
+			var babelOptions = util.babelOptions(options);
+			var source = vars + babel.<span class="apidocCodeKeywordSpan">transform</span>("(function(_) {" + cmd + "})(__callback
+);", babelOptions).code;
+			
+			context.__filename = filename;
+			// cannot assign context.__ directly in callback - need to investigate why
+			context.__private = context.__private || {};
+			context.__ = context.__private.__;
+			context.__callback = function(err, result) {
+				if (!err) context.__private.__ = result;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.transformFileSync" id="apidoc.element.streamline.transformFileSync">
+        function <span class="apidocSignatureSpan">streamline.</span>transformFileSync
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transformFileSync = function (path, options) {
+	path = path.replace(/\\/g, '/');
+	options = util.getOptions(options);
+	if (options.ignore &amp;&amp; path &amp;&amp; options.ignore(path)) {
+		return {
+			code: fs.readFileSync(path, 'utf8'),
+		};
+	}
+	return cacheSync.get(path, options, function() {
+		options.filename = path;
+		return exports.transform(fs.readFileSync(path, 'utf8'), options);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.cacheSync" id="apidoc.module.streamline.cacheSync">module streamline.cacheSync</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.cacheSync.get" id="apidoc.element.streamline.cacheSync.get">
+        function <span class="apidocSignatureSpan">streamline.cacheSync.</span>get
+        <span class="apidocSignatureSpan">(path, options, transform)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (path, options, transform) {
+	var result;
+	var mapPath;
+	if (!options.cache) {
+		result = transform();
+		if (result.map) sourceMaps.put(path, null, result.map);
+	} else {
+		path = path.replace(/\\/g, '/');
+
+		var i = path.indexOf('node_modules/');
+		if (i &lt; 0) i = path.lastIndexOf('/');
+		else i += 'node_modules'.length;
+
+		var dir = util.cacheDir(options);
+		dir += '/' + path.substring(0, i).replace(/[\/\:]/g, '__');
+		var f = dir + path.substring(i);
+		mkdirsSync(fsp.dirname(f));
+		mapPath = f.replace(/(\.\w+)?$/, '.map');
+		if (!options.force &amp;&amp; mtimeSync(f) &gt; mtimeSync(path)) {
+			if (!(options.ignore &amp;&amp; options.ignore(path))) sourceMaps.put(path, mapPath);
+			result = {
+				code: fs.readFileSync(f, "utf8"),
+				map: options.sourceMaps ? sourceMaps.get(path) : null,
+			};
+		} else {
+			result = transform();
+			fs.writeFileSync(f, result.code, "utf8");
+			if (result.map) {
+				// write map to cache instead of keeping it in memory (maps are only needed for stack traces)
+				sourceMaps.put(path, mapPath);
+				fs.writeFileSync(mapPath, JSON.stringify(result.map, null, '\t'), "utf8");
+			}
+		}
+	}
+	// cached file does not contain sourceMappingURL - we add it on the fly here
+	if (result.map &amp;&amp; options.sourceMaps) {
+		// force inline option if cache is disabled, as the map cannot be fetched from file
+		if (options.sourceMaps === 'inline' || options.sourceMaps === 'both' || mapPath == null) {
+			var mapData = new Buffer(JSON.stringify(result.map)).toString('base64')
+			result.code += '\n//# sourceMappingURL=data:application/json;base64,' + mapData;
+		} else {
+			result.code += '\n//# sourceMappingURL=file://' + (mapPath[0] === '/' ? mapPath : '/' + mapPath);
+		}
+	}
+	return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var f = dir + path.substring(i);
+		mkdirsSync(fsp.dirname(f));
+		mapPath = f.replace(/(\.\w+)?$/, '.map');
+		if (!options.force &amp;&amp; mtimeSync(f) &gt; mtimeSync(path)) {
+			if (!(options.ignore &amp;&amp; options.ignore(path))) sourceMaps.put(path, mapPath);
+			result = {
+				code: fs.readFileSync(f, "utf8"),
+				map: options.sourceMaps ? sourceMaps.<span class="apidocCodeKeywordSpan">get</span>(path) : null,
+			};
+		} else {
+			result = transform();
+			fs.writeFileSync(f, result.code, "utf8");
+			if (result.map) {
+				// write map to cache instead of keeping it in memory (maps are only needed for stack traces)
+				sourceMaps.put(path, mapPath);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.command" id="apidoc.module.streamline.command">module streamline.command</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.command.run" id="apidoc.element.streamline.command.run">
+        function <span class="apidocSignatureSpan">streamline.command.</span>run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function () {
+	// require cluster here so that it gets process.argv before we shift it.
+	if (require('cluster').setupMaster) require('cluster').setupMaster();
+	var argv = process.argv;
+
+	var prog = /\w*$/.exec(argv[1])[0];
+
+	var options = parseOptions(argv);
+	register.register(options);
+	if (options.compile) {
+		require('./compile').compile(function(err) {
+			if (err) {
+				console.error(err.message + "\n" + err.stack);<span class="apidocCodeCommentSpan"> /* eslint-disable no-process-exit */
+</span>				process.exit(1);
+			}
+		}, options.args, options);		
+	} else if (options.args.length === 0) {
+		require("./repl").run(prog, options);
+	} else {
+		runScript(options);		
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		require('./compile').compile(function(err) {
+			if (err) {
+				console.error(err.message + "\n" + err.stack); /* eslint-disable no-process-exit */
+				process.exit(1);
+			}
+		}, options.args, options);		
+	} else if (options.args.length === 0) {
+		require("./repl").<span class="apidocCodeKeywordSpan">run</span>(prog, options);
+	} else {
+		runScript(options);		
+	}
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.flows" id="apidoc.module.streamline.flows">module streamline.flows</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.apply" id="apidoc.element.streamline.flows.apply">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>apply
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4, a5) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	util.warn("Module " + module.id + " is deprecated: " + message);
+	if (!redirected) Object.keys(module.exports).forEach(function(name) {
+		var fn = module.exports[name];
+		if (typeof fn === 'function') {
+			module.exports[name] = function() {
+				if (!module.exports[name].warned) util.warn("Module " + module.id + ": calling deprecated function: " +
+name);
+				module.exports[name].warned = true;
+				return fn.<span class="apidocCodeKeywordSpan">apply</span>(this, arguments);
+			};
+		}
+	})
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.callWithTimeout" id="apidoc.element.streamline.flows.callWithTimeout">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>callWithTimeout
+        <span class="apidocSignatureSpan">(cb, fn, millis)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callWithTimeout = function (cb, fn, millis) {
+		var tid = setTimeout(function () {
+			if (cb) {
+					var ex = new Error("timeout");
+					ex.code = "ETIMEOUT";
+					ex.errno = "ETIMEOUT";
+					cb(ex);
+					cb = null;
+				}
+		}, millis);
+		fn(function (err, result) {
+			if (cb) {
+					clearTimeout(tid);
+					cb(err, result);
+					cb = null;
+				}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.check" id="apidoc.element.streamline.flows.check">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>check
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">check = function (err) {
+		if (err) throw err;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.collect" id="apidoc.element.streamline.flows.collect">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>collect
+        <span class="apidocSignatureSpan">(a1, a2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.each" id="apidoc.element.streamline.flows.each">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>each
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+function archiveOrders(date, cb) {
+db.connect(function(err, conn) {
+  if (err) return cb(err);
+  conn.query("select * from orders where date &lt; ?", [date], function(err, orders) {
+    if (err) return cb(err);
+    helper.<span class="apidocCodeKeywordSpan">each</span>(orders, function(order, next) {
+      conn.execute("insert into archivedOrders ...", [order.id, ...], function(err) {
+        if (err) return cb(err);
+        conn.execute("delete from orders where id=?", [order.id], function(err) {
+          if (err) return cb(err);
+          next();
+        });
+      });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.eachKey" id="apidoc.element.streamline.flows.eachKey">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>eachKey
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.eventHandler" id="apidoc.element.streamline.flows.eventHandler">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>eventHandler
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eventHandler = function (fn) {
+		return function () {
+			var that = this;
+			var args = Array.prototype.slice(arguments, 0);
+			return _streamline.async(function _$$$$16(_17) {
+				{
+					return _streamline.await(_filename, 364, fn, "apply_", 0, null, false, [true, that, args, 0]);
+				}
+			}, 0, 1)(function (err) {
+				if (err) throw err;
+			});
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.every" id="apidoc.element.streamline.flows.every">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>every
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.filter" id="apidoc.element.streamline.flows.filter">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>filter
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// commander skips 2 first args, not just first one.
+	var args = argv.slice(0, 2);
+	var cut = 2;
+	while (cut &lt; argv.length) {
+		var arg = argv[cut];
+		if (arg[0] !== '-') break;
+		cut++;
+		var opt = prog.options.<span class="apidocCodeKeywordSpan">filter</span>(function(o) {
+			return o.short === arg || o.long === arg;
+		})[0];
+		if (opt) {
+			args.push(arg);
+			if (opt.flags.indexOf('&lt;') &gt;= 0 &amp;&amp; cut &lt; argv.length) {
+				args.push(argv[cut++]);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.funnel" id="apidoc.element.streamline.flows.funnel">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>funnel
+        <span class="apidocSignatureSpan">(max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function funnel(max) {
+		var _doOne = function _doOne() {
+			var current = queue.shift();
+			if (!current.cb) return current.fn();
+			active++;
+			current.fn(function (err, result) {
+				active--;
+				if (!closed) {
+						current.cb(err, result);
+						while (active &lt; max &amp;&amp; queue.length &gt; 0) {
+							_doOne();
+						}
+					}
+			});
+		};
+
+		var overflow = function overflow(callback, fn) {
+			queue.push({
+				fn: fn,
+				cb: callback
+			});
+		};
+
+		max = max == null ? -1 : max;
+		if (max === 0) max = exports.funnel.defaultSize;
+		if (typeof max !== "number") throw new Error("bad max number: " + max);
+		var queue = [],
+		    active = 0,
+		    closed = false;
+
+		var fun = _streamline.async(function _$$$$(_2, fn) {
+			{
+				//console.log("FUNNEL: active=" + active + ", queued=" + queue.length);
+				if (max &lt; 0 || max === Infinity) return _streamline.await(_filename, 64, null, fn, 0, null, false, [true]);
+				// optimization to avoid _ -&gt; callback transition in fibers mode when the funnel is available.
+				if (active &lt; max) {
+						active++;
+						try {
+							return _streamline.await(_filename, 69, null, fn, 0, null, false, [true]);
+						} finally {
+							active--;
+							while (active &lt; max &amp;&amp; queue.length &gt; 0) {
+								_doOne();
+							}
+						}
+					} else {
+						return _streamline.await(_filename, 75, null, overflow, 0, null, false, [true, fn]);
+					}
+			}
+		}, 0, 2);
+
+		fun.close = function () {
+			queue = [];
+			closed = true;
+		};
+		return fun;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.getContext" id="apidoc.element.streamline.flows.getContext">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>getContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContext = function () {
+		return globals.context;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.handshake" id="apidoc.element.streamline.flows.handshake">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>handshake
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handshake = function () {
+		var callback = null,
+		    notified = false;
+		return {
+			wait: function wait(cb) {
+				if (callback) throw new Error("already waiting");
+				if (notified) exports.setImmediate(cb);else callback = cb;
+				notified = false;
+			},
+			notify: function notify() {
+				if (!callback) notified = true;else exports.setImmediate(callback);
+				callback = null;
+			}
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.ignore" id="apidoc.element.streamline.flows.ignore">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>ignore
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ignore = function (err) {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		var dir = util.cacheDir(options);
+		dir += '/' + path.substring(0, i).replace(/[\/\:]/g, '__');
+		var f = dir + path.substring(i);
+		mkdirsSync(fsp.dirname(f));
+		mapPath = f.replace(/(\.\w+)?$/, '.map');
+		if (!options.force &amp;&amp; mtimeSync(f) &gt; mtimeSync(path)) {
+			if (!(options.ignore &amp;&amp; options.<span class="apidocCodeKeywordSpan">ignore</span>(path))) sourceMaps.put(path, mapPath
+);
+			result = {
+				code: fs.readFileSync(f, "utf8"),
+				map: options.sourceMaps ? sourceMaps.get(path) : null,
+			};
+		} else {
+			result = transform();
+			fs.writeFileSync(f, result.code, "utf8");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.map" id="apidoc.element.streamline.flows.map">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>map
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	function resolvePreset(preset) {
+		if (typeof preset === 'string') {
+			preset = tryRequire('babel-preset-', preset);
+		}
+		if (preset &amp;&amp; preset.plugins) {
+			preset.plugins = preset.plugins.<span class="apidocCodeKeywordSpan">map</span>(resolvePlugin);
+			return preset;
+		} else {
+			throw new Error('invalid preset: ' + preset);
+		}
+	}
+
+	// enable es2015 preset and streamline plugin by default - can be overridden by options.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.nextTick" id="apidoc.element.streamline.flows.nextTick">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>nextTick
+        <span class="apidocSignatureSpan">(a1)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.queue" id="apidoc.element.streamline.flows.queue">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>queue
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">queue = function (options) {
+		if (typeof options === 'number') options = {
+			max: options
+		};
+		options = options || {};
+		var max = options.max != null ? options.max : -1;
+		var callback = null,
+		    err = null,
+		    q = [],
+		    pendingWrites = [];
+		var queue = {
+			///   `data = q.read(_)`: dequeues an item from the queue. Waits if no element is available.
+			read: function read(cb) {
+				if (callback) throw new Error("already getting");
+				if (q.length &gt; 0) {
+						var item = q.shift();
+						// recycle queue when empty to avoid maintaining arrays that have grown large and shrunk
+						if (q.length === 0) q = [];
+						exports.setImmediate(function () {
+							cb(err, item);
+						});
+						if (pendingWrites.length &gt; 0) {
+								var wr = pendingWrites.shift();
+								exports.setImmediate(function () {
+									wr[0](err, wr[1]);
+								});
+							}
+					} else {
+						callback = cb;
+					}
+			},
+			///   `q.write(_, data)`:  queues an item. Waits if the queue is full.
+			write: function write(cb, item) {
+				if (this.put(item)) {
+						exports.setImmediate(function () {
+							cb(err);
+						});
+					} else {
+						pendingWrites.push([cb, item]);
+					}
+			},
+			///   `ok = q.put(data)`: queues an item synchronously. Returns true if the queue accepted it, false otherwise.
+			put: function put(item, force) {
+				if (!callback) {
+						if (max &gt;= 0 &amp;&amp; q.length &gt;= max &amp;&amp; !force) return false;
+						q.push(item);
+					} else {
+						var cb = callback;
+						callback = null;
+						exports.setImmediate(function () {
+							cb(err, item);
+						});
+					}
+				return true;
+			},
+			///   `q.end()`: ends the queue. This is the synchronous equivalent of `q.write(_, undefined)`
+			end: function end() {
+				this.put(undefined, true);
+			},
+			///   `data = q.peek()`: returns the first item, without dequeuing it. Returns `undefined` if the queue is empty.
+			peek: function peek() {
+				return q[0];
+			},
+			///   `array = q.contents()`: returns a copy of the queue's contents.
+			contents: function contents() {
+				return q.slice(0);
+			},
+			///   `q.adjust(fn[, thisObj])`: adjusts the contents of the queue by calling `newContents = fn(oldContents)`.
+			adjust: function adjust(fn, thisObj) {
+				var nq = fn.call(thisObj, q);
+				if (!Array.isArray(nq)) throw new Error("reorder function does not return array");
+				q = nq;
+			}
+		};
+		///   `q.length`: number of items currently in the queue.
+		Object.defineProperty(queue, "length", {
+			get: function get() {
+				return q.length;
+			}
+		});
+		return queue;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.reduce" id="apidoc.element.streamline.flows.reduce">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>reduce
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4, a5) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+		
+	var options = prog.parse(args);
+	options.args = options.args.concat(argv.slice(cut));
+
+	options = Object.keys(options).filter(function(opt) {
+		return !/^([A-Z]|_)/.test(opt);
+	}).<span class="apidocCodeKeywordSpan">reduce</span>(function(opts, key) {
+		opts[key] = options[key];
+		return opts;
+	}, {});
+	if (options.onlyExtensions) options.onlyExtensions = options.onlyExtensions.split(',');
+	return util.getOptions(util.extend(util.envOptions(), options));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.reduceRight" id="apidoc.element.streamline.flows.reduceRight">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>reduceRight
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4, a5) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.setContext" id="apidoc.element.streamline.flows.setContext">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>setContext
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setContext = function (ctx) {
+		var old = globals.context;
+		globals.context = ctx;
+		return old;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.setImmediate" id="apidoc.element.streamline.flows.setImmediate">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>setImmediate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImmediate = function () {
+<span class="apidocCodeCommentSpan">/*
+ * this function will do nothing
+ */
+</span>    return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.setInterval" id="apidoc.element.streamline.flows.setInterval">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>setInterval
+        <span class="apidocSignatureSpan">(fn, millis)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setInterval = function (fn, millis) {
+		return setInterval(function () {
+			_streamline.future(_filename, 348, null, fn, 0, null, false, [false]);
+		}, millis);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.setTimeout" id="apidoc.element.streamline.flows.setTimeout">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>setTimeout
+        <span class="apidocSignatureSpan">(fn, millis)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTimeout = function (fn, millis) {
+		// node's setTimeout notifies immediately if millis &gt; max!!
+		// So be safe and work around it.
+		// Gotcha: timeout cannot be cancelled beyond max.
+		var max = 0x7fffffff;
+		if (millis &gt; max) {
+				return setTimeout(function () {
+					exports.setTimeout(fn, millis - max);
+				}, max);
+			} else {
+				return setTimeout(function () {
+					_streamline.future(_filename, 340, null, fn, 0, null, false, [false]);
+				}, millis);
+			}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.sleep" id="apidoc.element.streamline.flows.sleep">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>sleep
+        <span class="apidocSignatureSpan">(a1, a2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.some" id="apidoc.element.streamline.flows.some">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>some
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	return babelOpts;
+};
+
+exports.canCompile = function(path, options) {
+	// always ignore .d.ts, even if .ts is enabled
+	if (/\.d\.ts/.test(path)) return false;
+	if (options.onlyExtensions) return options.onlyExtensions.<span class="apidocCodeKeywordSpan">some</span>(function(ext) {
+		return path.substring(path.length - ext.length) === ext;
+	});
+	return /\.(_js|_?coffee|ts)$/.test(path);
+};
+
+exports.removeShebang = function(code) {
+	// replace #! by // - preserves offsets in file
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.sort" id="apidoc.element.streamline.flows.sort">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>sort
+        <span class="apidocSignatureSpan">(a1, a2, a3, a4, a5)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2, a3, a4, a5) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if (cleanedUp) return dir;
+	cleanedUp = true;
+	if (!fs.existsSync(dir)) return dir;
+	var paths = fs.readdirSync(dir).map(function(name) {
+		return fsp.join(dir, name);
+	});
+	if (paths.length &lt;= max) return dir;
+	paths = paths.<span class="apidocCodeKeywordSpan">sort</span>(function(p1, p2) {
+		return fs.statSync(p2).mtime - fs.statSync(p1).mtime;
+	});
+	paths.slice(max).forEach(delCache);
+	return dir;
+}
+
+function fastHash(str) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.spray" id="apidoc.element.streamline.flows.spray">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>spray
+        <span class="apidocSignatureSpan">(fns, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spray = function (fns, max) {
+		return new function () {
+			var funnel = exports.funnel(max);
+			this.collect = _streamline.async(function _$$$$10(_11, count, trim) {
+				{
+					return _streamline.await(_filename, 110, function (callback) {
+						if (typeof callback !== "function") throw new Error("invalid call to collect: no callback");
+						var results = trim ? [] : new Array(fns.length);
+						count = count &lt; 0 ? fns.length : Math.min(count, fns.length);
+						if (count === 0) return callback(null, results);
+						var collected = 0;
+						for (var i = 0; i &lt; fns.length; i++) {
+							(function (i) {
+								funnel(function (err, result) {
+									if (err) return callback(err);
+									if (trim) results.push(result);else results[i] = result;
+									if (++collected === count) return callback(null, results);
+								}, fns[i]);
+							})(i);
+						}
+					}, "call", 1, null, false, [this, true]);
+				}
+			}, 0, 3);
+			this.collectOne = _streamline.async(function _$$$$11(_12) {
+				{
+					var result = _streamline.await(_filename, 129, this, "collect", 0, null, false, [true, 1, true]);
+					return result &amp;&amp; result[0];
+				}
+			}, 0, 1);
+			this.collectAll = _streamline.async(function _$$$$12(_13) {
+				{
+					return _streamline.await(_filename, 133, this, "collect", 0, null, false, [true, -1, false]);
+				}
+			}, 0, 1);
+		}();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.trampoline" id="apidoc.element.streamline.flows.trampoline">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>trampoline
+        <span class="apidocSignatureSpan">(cb, fn, thisObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trampoline = function (cb, fn, thisObj) {
+		exports.setImmediate(exports.withContext(function () {
+			fn.call(thisObj, cb);
+		}, globals.context));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.wait" id="apidoc.element.streamline.flows.wait">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>wait
+        <span class="apidocSignatureSpan">(a1, a2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapper(a1, a2) {
+		var that = this;
+		var args = Array.prototype.slice.call(arguments);
+		var cb = args[index];
+		if (typeof cb !== "function") {
+			if (g.allowBooleanPlaceholders &amp;&amp; typeof cb === 'boolean') {
+				if (cb) cb = util.defaultCallback;
+				else return exports.future("", 0, null, wrapper.bind(this), index)(args);
+			}
+			else throw util.argError(fn.name, index, "function", typeof cb);
+		}
+		// Start a new fiber
+		var cx = g.context;
+		var frame = g.frame;
+		Fiber(function __streamline$run() {
+			// copy variables from outer scope into locals and reset them
+			// this avoids a serious memory leak.
+			var largs = args;
+			args = null;
+			var lcb = cb;
+			cb = null;
+			var lthat = that;
+			that = null;
+
+			var val, err = null;
+			g.context = cx;
+			cx = null;
+			try {
+				val = applyFast(fn, lthat, largs);
+			} catch (e) {
+				err = e;
+			} finally {
+				lcb(err, val);
+			}
+		}).run();
+		g.frame = frame;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.flows.withContext" id="apidoc.element.streamline.flows.withContext">
+        function <span class="apidocSignatureSpan">streamline.flows.</span>withContext
+        <span class="apidocSignatureSpan">(fn, cx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withContext = function (fn, cx) {
+		return function () {
+			var oldContext = globals.context;
+			globals.context = cx || Object.create(oldContext);
+			try {
+				return fn.apply(this, arguments);
+			} finally {
+				globals.context = oldContext;
+			}
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.globals" id="apidoc.module.streamline.globals">module streamline.globals</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.globals.withContext" id="apidoc.element.streamline.globals.withContext">
+        function <span class="apidocSignatureSpan">streamline.globals.</span>withContext
+        <span class="apidocSignatureSpan">(fn, cx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withContext = function (fn, cx) {
+		return function () {
+			var oldContext = globals.context;
+			globals.context = cx || Object.create(oldContext);
+			try {
+				return fn.apply(this, arguments);
+			} finally {
+				globals.context = oldContext;
+			}
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.repl" id="apidoc.module.streamline.repl">module streamline.repl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.repl.run" id="apidoc.element.streamline.repl.run">
+        function <span class="apidocSignatureSpan">streamline.repl.</span>run
+        <span class="apidocSignatureSpan">(prog, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (prog, options) {
+	function evaluate(cmd, context, filename, callback) {
+		// HACK: prevent empty commands (just newlines) from throwing errors
+		// during transformation. the command itself is wrapped in parens.
+		if (cmd === '(\n)' || /^\s*$/.test(cmd)) {
+			callback(null);		// explicitly returning undefined, like node
+			return;
+		}
+
+		try {
+			//cmd = cmd.substring(1, cmd.length - 1);
+			if (prog === "_coffee") {
+				cmd = require('coffee-script').compile(cmd, {
+					filename: filename,
+					bare: true
+				}).replace(/\n/g, '').replace(/;$/, '');
+			}
+			var isStatement = /^\s*(var|function|if|switch|for|while|do|try)\b/.test(cmd);
+			cmd = isStatement ? cmd : ("return (" + cmd + ')');
+			var decl = /^\s*(var|function)\s*(\w+)([\s\S]*)$/.exec(cmd);
+			var vars = "";
+			if (decl) {
+				vars += "var " + decl[2] + ";";
+				if (decl[1] === "function") cmd = decl[2] + "=function " + decl[2] + decl[3];
+				else cmd = decl[2] + decl[3];
+			}
+			var babelOptions = util.babelOptions(options);
+			var source = vars + babel.transform("(function(_) {" + cmd + "})(__callback);", babelOptions).code;
+			
+			context.__filename = filename;
+			// cannot assign context.__ directly in callback - need to investigate why
+			context.__private = context.__private || {};
+			context.__ = context.__private.__;
+			context.__callback = function(err, result) {
+				if (!err) context.__private.__ = result;
+				callback(err, result);
+			};
+			context.require = require;
+			vm.runInContext(source, context, filename);
+			
+		} catch (ex) {
+			callback(ex);
+		}
+	}
+
+	require('repl').start({
+		prompt: prog + "&gt; ",
+		eval: evaluate,
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		require('./compile').compile(function(err) {
+			if (err) {
+				console.error(err.message + "\n" + err.stack); /* eslint-disable no-process-exit */
+				process.exit(1);
+			}
+		}, options.args, options);		
+	} else if (options.args.length === 0) {
+		require("./repl").<span class="apidocCodeKeywordSpan">run</span>(prog, options);
+	} else {
+		runScript(options);		
+	}
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.sourceMaps" id="apidoc.module.streamline.sourceMaps">module streamline.sourceMaps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.sourceMaps.get" id="apidoc.element.streamline.sourceMaps.get">
+        function <span class="apidocSignatureSpan">streamline.sourceMaps.</span>get
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (path) {
+	var p = _maps[normalize(path)];
+	if (!p) return null;
+	if (p.map) return p.map;
+	else if (p.filename) return p.map = JSON.parse(fs.readFileSync(p.filename));
+	else return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var f = dir + path.substring(i);
+		mkdirsSync(fsp.dirname(f));
+		mapPath = f.replace(/(\.\w+)?$/, '.map');
+		if (!options.force &amp;&amp; mtimeSync(f) &gt; mtimeSync(path)) {
+			if (!(options.ignore &amp;&amp; options.ignore(path))) sourceMaps.put(path, mapPath);
+			result = {
+				code: fs.readFileSync(f, "utf8"),
+				map: options.sourceMaps ? sourceMaps.<span class="apidocCodeKeywordSpan">get</span>(path) : null,
+			};
+		} else {
+			result = transform();
+			fs.writeFileSync(f, result.code, "utf8");
+			if (result.map) {
+				// write map to cache instead of keeping it in memory (maps are only needed for stack traces)
+				sourceMaps.put(path, mapPath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.sourceMaps.put" id="apidoc.element.streamline.sourceMaps.put">
+        function <span class="apidocSignatureSpan">streamline.sourceMaps.</span>put
+        <span class="apidocSignatureSpan">(path, filename, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (path, filename, map) {
+	_maps[normalize(path)] = {
+		filename: filename,
+		map: map,
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+exports.get = function(path, options, transform) {
+	var result;
+	var mapPath;
+	if (!options.cache) {
+		result = transform();
+		if (result.map) sourceMaps.<span class="apidocCodeKeywordSpan">put</span>(path, null, result.map);
+	} else {
+		path = path.replace(/\\/g, '/');
+
+		var i = path.indexOf('node_modules/');
+		if (i &lt; 0) i = path.lastIndexOf('/');
+		else i += 'node_modules'.length;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.transformSync" id="apidoc.module.streamline.transformSync">module streamline.transformSync</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.transformSync.transform" id="apidoc.element.streamline.transformSync.transform">
+        function <span class="apidocSignatureSpan">streamline.transformSync.</span>transform
+        <span class="apidocSignatureSpan">(source, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transform = function (source, options) {
+	var path = options.filename;
+	if (options.ignore &amp;&amp; path &amp;&amp; options.ignore(path)) {
+		return {
+			code: source,
+		};
+	}
+	if (!options.quiet) util.log("transforming (" + options.runtime + "): " + path);
+	var babelOptions = util.babelOptions(options, path);
+	var extHint = options.ext || path;
+	if (/\._?coffee$/.test(extHint)) {
+		var decaf = require('coffee-script').compile(source, {
+			sourceMap: true,
+			generatedFile: path.replace(/\._coffee$/, '.coffee'),
+			sourceFiles: [path],
+		});
+		if (/\.coffee$/.test(extHint)) {
+			return {
+				code: decaf.js,
+				map: JSON.parse(decaf.v3SourceMap),
+			};
+		}
+		babelOptions.inputSourceMap = JSON.parse(decaf.v3SourceMap);
+		return require('babel-core').transform(decaf.js, babelOptions);
+	} else if (/\.ts$/.test(extHint)) {
+		// use the typescript transpiler to strip type annotations
+		var transpiled = tsCompile(source, path, options);
+		// pass the result to babel (for streamline transform)
+		babelOptions.inputSourceMap = JSON.parse(transpiled.sourceMapText);
+		return require('babel-core').transform(transpiled.outputText, babelOptions);
+	} else {
+		return require('babel-core').transform(util.removeShebang(source), babelOptions);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			var vars = "";
+			if (decl) {
+				vars += "var " + decl[2] + ";";
+				if (decl[1] === "function") cmd = decl[2] + "=function " + decl[2] + decl[3];
+				else cmd = decl[2] + decl[3];
+			}
+			var babelOptions = util.babelOptions(options);
+			var source = vars + babel.<span class="apidocCodeKeywordSpan">transform</span>("(function(_) {" + cmd + "})(__callback
+);", babelOptions).code;
+			
+			context.__filename = filename;
+			// cannot assign context.__ directly in callback - need to investigate why
+			context.__private = context.__private || {};
+			context.__ = context.__private.__;
+			context.__callback = function(err, result) {
+				if (!err) context.__private.__ = result;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.transformSync.transformFileSync" id="apidoc.element.streamline.transformSync.transformFileSync">
+        function <span class="apidocSignatureSpan">streamline.transformSync.</span>transformFileSync
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transformFileSync = function (path, options) {
+	path = path.replace(/\\/g, '/');
+	options = util.getOptions(options);
+	if (options.ignore &amp;&amp; path &amp;&amp; options.ignore(path)) {
+		return {
+			code: fs.readFileSync(path, 'utf8'),
+		};
+	}
+	return cacheSync.get(path, options, function() {
+		options.filename = path;
+		return exports.transform(fs.readFileSync(path, 'utf8'), options);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.streamline.util" id="apidoc.module.streamline.util">module streamline.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.babelOptions" id="apidoc.element.streamline.util.babelOptions">
+        function <span class="apidocSignatureSpan">streamline.util.</span>babelOptions
+        <span class="apidocSignatureSpan">(options, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">babelOptions = function (options, filename) {
+	options.babel = options.babel || {};
+
+	function resolvePlugin(plugin) {
+		if (typeof plugin === 'string') {
+			// intercept streamline plugin to add options.
+			if (/^(babel-plugin-)?streamline$/.test(plugin)) {
+				return [require('babel-plugin-streamline'), {
+					runtime: options.runtime,
+					quiet: options.quiet,
+					forceTransform: !/\.(coffee|js)$/.test(options.ext || filename || ''),
+				}];
+			} else {
+				return tryRequire('babel-plugin-', plugin);
+			}
+		} else if (Array.isArray(plugin)) {
+			// [plugin, options]
+			plugin[0] = resolvePlugin(plugin[0]);
+			// generators transform is enabled by default in es2015 preset
+			// disable it if streamline `generators` option is on
+			if (plugin[1] &amp;&amp; plugin[1].asyncGenerators === false &amp;&amp; options.runtime === 'generators') {
+				plugin[1].generators = false;
+			}
+			return plugin;
+		} else {
+			return plugin;
+		}
+	}
+
+	function resolvePreset(preset) {
+		if (typeof preset === 'string') {
+			preset = tryRequire('babel-preset-', preset);
+		}
+		if (preset &amp;&amp; preset.plugins) {
+			preset.plugins = preset.plugins.map(resolvePlugin);
+			return preset;
+		} else {
+			throw new Error('invalid preset: ' + preset);
+		}
+	}
+
+	// enable es2015 preset and streamline plugin by default - can be overridden by options.
+	var babelOpts = {
+		plugins: ['streamline'],
+		presets: ['es2015'],
+	};
+	Object.keys(options.babel).forEach(function(opt) {
+		if (options.babel[opt] != null) babelOpts[opt] = options.babel[opt];
+	});
+	// resolve plugins and presets locally (we need this for globally installed streamline)
+	babelOpts.plugins = babelOpts.plugins.map(resolvePlugin);
+	babelOpts.presets = babelOpts.presets.map(resolvePreset);
+
+	// always return source maps - cache needs them
+	// special options like inline and both are handled post-transform, in compile logic
+	babelOpts.sourceMaps = true;
+	if (filename) {
+		babelOpts.filename = filename;
+		babelOpts.sourceFileName = filename;
+	}
+	return babelOpts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			var decl = /^\s*(var|function)\s*(\w+)([\s\S]*)$/.exec(cmd);
+			var vars = "";
+			if (decl) {
+				vars += "var " + decl[2] + ";";
+				if (decl[1] === "function") cmd = decl[2] + "=function " + decl[2] + decl[3];
+				else cmd = decl[2] + decl[3];
+			}
+			var babelOptions = util.<span class="apidocCodeKeywordSpan">babelOptions</span>(options);
+			var source = vars + babel.transform("(function(_) {" + cmd + "})(__callback);", babelOptions).code;
+			
+			context.__filename = filename;
+			// cannot assign context.__ directly in callback - need to investigate why
+			context.__private = context.__private || {};
+			context.__ = context.__private.__;
+			context.__callback = function(err, result) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.cacheDir" id="apidoc.element.streamline.util.cacheDir">
+        function <span class="apidocSignatureSpan">streamline.util.</span>cacheDir
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cacheDir = function (options) {
+	var subdir = 'v' + pluginVersion + '-' + options.runtime + '-' + fastHash(JSON.stringify({
+		// options that influence code generation should be listed below.
+		version: pluginVersion,
+		runtime: options.runtime,
+	}));
+	return fsp.join(cleanup(cacheRoot(options), options.cacheKeep || 6), subdir)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	} else {
+		path = path.replace(/\\/g, '/');
+
+		var i = path.indexOf('node_modules/');
+		if (i &lt; 0) i = path.lastIndexOf('/');
+		else i += 'node_modules'.length;
+
+		var dir = util.<span class="apidocCodeKeywordSpan">cacheDir</span>(options);
+		dir += '/' + path.substring(0, i).replace(/[\/\:]/g, '__');
+		var f = dir + path.substring(i);
+		mkdirsSync(fsp.dirname(f));
+		mapPath = f.replace(/(\.\w+)?$/, '.map');
+		if (!options.force &amp;&amp; mtimeSync(f) &gt; mtimeSync(path)) {
+			if (!(options.ignore &amp;&amp; options.ignore(path))) sourceMaps.put(path, mapPath);
+			result = {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.canCompile" id="apidoc.element.streamline.util.canCompile">
+        function <span class="apidocSignatureSpan">streamline.util.</span>canCompile
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canCompile = function (path, options) {
+	// always ignore .d.ts, even if .ts is enabled
+	if (/\.d\.ts/.test(path)) return false;
+	if (options.onlyExtensions) return options.onlyExtensions.some(function(ext) {
+		return path.substring(path.length - ext.length) === ext;
+	});
+	return /\.(_js|_?coffee|ts)$/.test(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.deprecate" id="apidoc.element.streamline.util.deprecate">
+        function <span class="apidocSignatureSpan">streamline.util.</span>deprecate
+        <span class="apidocSignatureSpan">(module, message, redirected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deprecate = function (module, message, redirected) {
+	util.warn("Module " + module.id + " is deprecated: " + message);
+	if (!redirected) Object.keys(module.exports).forEach(function(name) {
+		var fn = module.exports[name];
+		if (typeof fn === 'function') {
+			module.exports[name] = function() {
+				if (!module.exports[name].warned) util.warn("Module " + module.id + ": calling deprecated function: " + name);
+				module.exports[name].warned = true;
+				return fn.apply(this, arguments);
+			};
+		}
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+"use strict";
+module.exports = require('streamline-runtime').flows;
+// enable the deprecation warning later because ez-streams uses this module
+//require('../util').<span class="apidocCodeKeywordSpan">deprecate</span>(module, "use require('streamline-runtime
+').flows instead", true);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.envOptions" id="apidoc.element.streamline.util.envOptions">
+        function <span class="apidocSignatureSpan">streamline.util.</span>envOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">envOptions = function () {
+	var dirs = ['.'];
+	if (require.main) { // REPL doesn't have a require.main
+		dirs.push(fsp.dirname(require.main.filename));
+	}
+	dirs.push(homeDir());
+	for (var i = 0; i &lt; dirs.length; i++) {
+		var dir = dirs[i];
+		if (dir &amp;&amp; fs.existsSync(fsp.join(dir, '.streamline.json'))) {
+			return JSON.parse(fs.readFileSync(fsp.join(dir, '.streamline.json'), 'utf8'));
+		}
+	}
+	return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	options = Object.keys(options).filter(function(opt) {
+		return !/^([A-Z]|_)/.test(opt);
+	}).reduce(function(opts, key) {
+		opts[key] = options[key];
+		return opts;
+	}, {});
+	if (options.onlyExtensions) options.onlyExtensions = options.onlyExtensions.split(',');
+	return util.getOptions(util.extend(util.<span class="apidocCodeKeywordSpan">envOptions</span>(), options));
+};
+
+function runScript(options) {
+	var filename = options.args[0];
+
+	// We'll make that file the "main" module by reusing the current one.
+	var mainModule = require.main;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.error" id="apidoc.element.streamline.util.error">
+        function <span class="apidocSignatureSpan">streamline.util.</span>error
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (message) {
+	console.error(colors.magenta("[STREAMLINE] " + message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+```
+
+You can also call streamline functions as if they were standard node functions. For example, the `lineCount` function that we just
+ defined above can be called as follows in standard node.js style:
+
+``` javascript
+lineCount("README.md", function(err, result) {
+  if (err) return console.<span class="apidocCodeKeywordSpan">error</span>("ERROR: " + err.message);
+  console.log("README has " + result + " lines.");
+});
+```
+
+You can mix streamline functions, classical callback based code and synchrononous functions in the same file.
+
+Streamline only transforms the functions that have the special `_` parameter.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.extend" id="apidoc.element.streamline.util.extend">
+        function <span class="apidocSignatureSpan">streamline.util.</span>extend
+        <span class="apidocSignatureSpan">(dst, src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (dst, src) {
+	dst = dst || {};
+	Array.prototype.slice.call(arguments, 1).forEach(function(src) {
+		src &amp;&amp; Object.keys(src).forEach(function(k) {
+			dst[k] = src[k];
+		});
+	});
+	return dst;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	options = Object.keys(options).filter(function(opt) {
+		return !/^([A-Z]|_)/.test(opt);
+	}).reduce(function(opts, key) {
+		opts[key] = options[key];
+		return opts;
+	}, {});
+	if (options.onlyExtensions) options.onlyExtensions = options.onlyExtensions.split(',');
+	return util.getOptions(util.<span class="apidocCodeKeywordSpan">extend</span>(util.envOptions(), options));
+};
+
+function runScript(options) {
+	var filename = options.args[0];
+
+	// We'll make that file the "main" module by reusing the current one.
+	var mainModule = require.main;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.getOptions" id="apidoc.element.streamline.util.getOptions">
+        function <span class="apidocSignatureSpan">streamline.util.</span>getOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOptions = function (options) {
+	var opts = {
+		cache: true,
+		quiet: false,
+	};
+	Object.keys(options || {}).forEach(function(opt) {
+		if (/^(fibers|generators)$/.test(opt)) {
+			if (!opts.quiet) util.warn('obsolete option: ' + opt + ', use runtime instead');
+			opts.runtime = opt;
+		} else if (/^(sourceMap|map)$/.test(opt)) {
+			if (!opts.quiet) util.warn('obsolete option: ' + opt + ', use sourceMaps instead');
+			opts.sourceMaps = !! options.sourceMap;
+		} else if (opt === 'sourceMapFile') {
+			if (!opts.quiet) util.warn('obsolete option: sourceMapFile, use sourceMapTarget instead');
+			opts.sourceMapTarget = options.sourceMapFile;
+		} else if (opt === 'outputDir') {
+			if (!opts.quiet) util.warn('obsolete option: outputDir, use outDir instead');
+			opts.outDir = options.outputDir;
+		} else if (opt === 'verbose') {
+			opts.quiet = !options.verbose;
+			if (!opts.quiet) util.warn('obsolete option: verbose, use quiet instead');
+		} else if (/^(lines|standalone|fast|old-style-future|promise|cb|aggressive)$/.test(opt)) {
+			if (!opts.quiet) util.warn('ignoring obsolete option: ' + opt);
+		} else if (/^(compile|outDir|cache|cacheDir|cacheKeep|force|runtime|sourceMaps|sourceMapTarget|quiet|preload|ignore)$/.test(opt
+) || //
+		/^(args|babel|ext|extensions|onlyExtensions|sourceRoot|typescript)$/.test(opt)) {
+			// valid option
+			opts[opt] = options[opt];
+		} else if (/^(program|options|rawArgs|args|commands|filename)$/.test(opt)) {
+			// discard silently
+		} else {
+			if (!opts.quiet) util.warn('invalid option: ' + opt);
+		}
+	});
+	opts.runtime = opts.runtime || require('streamline-runtime').runtime;
+	return opts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	options = Object.keys(options).filter(function(opt) {
+		return !/^([A-Z]|_)/.test(opt);
+	}).reduce(function(opts, key) {
+		opts[key] = options[key];
+		return opts;
+	}, {});
+	if (options.onlyExtensions) options.onlyExtensions = options.onlyExtensions.split(',');
+	return util.<span class="apidocCodeKeywordSpan">getOptions</span>(util.extend(util.envOptions(), options));
+};
+
+function runScript(options) {
+	var filename = options.args[0];
+
+	// We'll make that file the "main" module by reusing the current one.
+	var mainModule = require.main;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.idem" id="apidoc.element.streamline.util.idem">
+        function <span class="apidocSignatureSpan">streamline.util.</span>idem
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">idem = function (x) {
+	return x;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.idem = function(x) {
+	return x;
+}
+
+var colors;
+try {
+	colors = require(util.<span class="apidocCodeKeywordSpan">idem</span>("colors/safe"));
+} catch (ex) {}
+if (!colors) colors = ['black', 'red', 'green', 'yellow', 'blue', 'magenta
+', 'cyan', 'white', 'gray'] //
+.reduce(function(r, c) {
+	r[c] = util.idem;
+	return r;
+}, {});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.log" id="apidoc.element.streamline.util.log">
+        function <span class="apidocSignatureSpan">streamline.util.</span>log
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (message) {
+	console.log(colors.gray("[STREAMLINE] " + message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          if (err) return cb(err);
+          conn.execute("delete from orders where id=?", [order.id], function(err) {
+            if (err) return cb(err);
+            next();
+          });
+        });
+      }, function() {
+        console.<span class="apidocCodeKeywordSpan">log</span>("orders have been archived");
+        cb();
+      });
+    });
+  });
+}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.removeShebang" id="apidoc.element.streamline.util.removeShebang">
+        function <span class="apidocSignatureSpan">streamline.util.</span>removeShebang
+        <span class="apidocSignatureSpan">(code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeShebang = function (code) {
+	// replace #! by // - preserves offsets in file
+	return (code[0] === '#' &amp;&amp; code[1] === '!') ? '//' + code.substring(2) : code;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	} else if (/\.ts$/.test(extHint)) {
+		// use the typescript transpiler to strip type annotations
+		var transpiled = tsCompile(source, path, options);
+		// pass the result to babel (for streamline transform)
+		babelOptions.inputSourceMap = JSON.parse(transpiled.sourceMapText);
+		return require('babel-core').transform(transpiled.outputText, babelOptions);
+	} else {
+		return require('babel-core').transform(util.<span class="apidocCodeKeywordSpan">removeShebang</span>(source), babelOptions
+);
+	}
+}
+
+exports.transformFileSync = function(path, options) {
+	path = path.replace(/\\/g, '/');
+	options = util.getOptions(options);
+	if (options.ignore &amp;&amp; path &amp;&amp; options.ignore(path)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.streamline.util.warn" id="apidoc.element.streamline.util.warn">
+        function <span class="apidocSignatureSpan">streamline.util.</span>warn
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (message) {
+	console.warn(colors.yellow("[STREAMLINE] " + message));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				args.push(argv[cut++]);
+			}
+		} else {
+			// handle compat options
+			if (arg === '--cache') {
+				// ignore silently - cache is now on by default.
+			} else if (/^(-l(m|i|p)|--(lines-(mark|ignore|preserve)|standalone|fast|old-style-future|promise|cb|aggressive))$/.test(arg)) {
+				util.<span class="apidocCodeKeywordSpan">warn</span>('obsolete option ignored: ' + arg);
+				return;
+			} else if (arg === '--map') {
+				util.warn('obsolete option: --map, use -s or --source-maps instead');
+				args.push('--source-maps');
+				args.push('true');
+				return;
+			} else if (arg === '--source-map') {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

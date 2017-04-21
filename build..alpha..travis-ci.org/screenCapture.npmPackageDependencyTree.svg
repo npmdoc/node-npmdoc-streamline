@@ -1,0 +1,111 @@
+<svg height="1726" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="1726" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">47 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ streamline@2.0.19 </tspan>
+<tspan x="10" y="90">  ├─┬ babel-core@6.24.1 </tspan>
+<tspan x="10" y="106">  │ ├─┬ babel-code-frame@6.22.0 </tspan>
+<tspan x="10" y="122">  │ │ ├─┬ chalk@1.1.3 </tspan>
+<tspan x="10" y="138">  │ │ │ ├── ansi-styles@2.2.1 </tspan>
+<tspan x="10" y="154">  │ │ │ ├── escape-string-regexp@1.0.5 </tspan>
+<tspan x="10" y="170">  │ │ │ ├─┬ has-ansi@2.0.0 </tspan>
+<tspan x="10" y="186">  │ │ │ │ └── ansi-regex@2.1.1 </tspan>
+<tspan x="10" y="202">  │ │ │ ├── strip-ansi@3.0.1 </tspan>
+<tspan x="10" y="218">  │ │ │ └── supports-color@2.0.0 </tspan>
+<tspan x="10" y="234">  │ │ ├── esutils@2.0.2 </tspan>
+<tspan x="10" y="250">  │ │ └── js-tokens@3.0.1 </tspan>
+<tspan x="10" y="266">  │ ├─┬ babel-generator@6.24.1 </tspan>
+<tspan x="10" y="282">  │ │ ├─┬ detect-indent@4.0.0 </tspan>
+<tspan x="10" y="298">  │ │ │ └─┬ repeating@2.0.1 </tspan>
+<tspan x="10" y="314">  │ │ │   └─┬ is-finite@1.0.2 </tspan>
+<tspan x="10" y="330">  │ │ │     └── number-is-nan@1.0.1 </tspan>
+<tspan x="10" y="346">  │ │ ├── jsesc@1.3.0 </tspan>
+<tspan x="10" y="362">  │ │ └── trim-right@1.0.1 </tspan>
+<tspan x="10" y="378">  │ ├── babel-helpers@6.24.1 </tspan>
+<tspan x="10" y="394">  │ ├── babel-messages@6.23.0 </tspan>
+<tspan x="10" y="410">  │ ├─┬ babel-register@6.24.1 </tspan>
+<tspan x="10" y="426">  │ │ ├── core-js@2.4.1 </tspan>
+<tspan x="10" y="442">  │ │ ├─┬ home-or-tmp@2.0.0 </tspan>
+<tspan x="10" y="458">  │ │ │ ├── os-homedir@1.0.2 </tspan>
+<tspan x="10" y="474">  │ │ │ └── os-tmpdir@1.0.2 </tspan>
+<tspan x="10" y="490">  │ │ ├─┬ mkdirp@0.5.1 </tspan>
+<tspan x="10" y="506">  │ │ │ └── minimist@0.0.8 </tspan>
+<tspan x="10" y="522">  │ │ └── source-map-support@0.4.14 </tspan>
+<tspan x="10" y="538">  │ ├── babel-runtime@6.23.0 </tspan>
+<tspan x="10" y="554">  │ ├── babel-template@6.24.1 </tspan>
+<tspan x="10" y="570">  │ ├─┬ babel-traverse@6.24.1 </tspan>
+<tspan x="10" y="586">  │ │ ├── globals@9.17.0 </tspan>
+<tspan x="10" y="602">  │ │ └─┬ invariant@2.2.2 </tspan>
+<tspan x="10" y="618">  │ │   └── loose-envify@1.3.1 </tspan>
+<tspan x="10" y="634">  │ ├─┬ babel-types@6.24.1 </tspan>
+<tspan x="10" y="650">  │ │ └── to-fast-properties@1.0.2 </tspan>
+<tspan x="10" y="666">  │ ├── babylon@6.17.0 </tspan>
+<tspan x="10" y="682">  │ ├── convert-source-map@1.5.0 </tspan>
+<tspan x="10" y="698">  │ ├─┬ debug@2.6.4 </tspan>
+<tspan x="10" y="714">  │ │ └── ms@0.7.3 </tspan>
+<tspan x="10" y="730">  │ ├── json5@0.5.1 </tspan>
+<tspan x="10" y="746">  │ ├── lodash@4.17.4 </tspan>
+<tspan x="10" y="762">  │ ├─┬ minimatch@3.0.3 </tspan>
+<tspan x="10" y="778">  │ │ └─┬ brace-expansion@1.1.7 </tspan>
+<tspan x="10" y="794">  │ │   ├── balanced-match@0.4.2 </tspan>
+<tspan x="10" y="810">  │ │   └── concat-map@0.0.1 </tspan>
+<tspan x="10" y="826">  │ ├── path-is-absolute@1.0.1 </tspan>
+<tspan x="10" y="842">  │ ├── private@0.1.7 </tspan>
+<tspan x="10" y="858">  │ ├── slash@1.0.0 </tspan>
+<tspan x="10" y="874">  │ └── source-map@0.5.6 </tspan>
+<tspan x="10" y="890">  ├── babel-plugin-streamline@2.0.26 </tspan>
+<tspan x="10" y="906">  ├─┬ babel-preset-es2015@6.24.1 </tspan>
+<tspan x="10" y="922">  │ ├── babel-plugin-check-es2015-constants@6.22.0 </tspan>
+<tspan x="10" y="938">  │ ├── babel-plugin-transform-es2015-arrow-functions@6.22.0 </tspan>
+<tspan x="10" y="954">  │ ├── babel-plugin-transform-es2015-block-scoped-functions@6.22.0 </tspan>
+<tspan x="10" y="970">  │ ├── babel-plugin-transform-es2015-block-scoping@6.24.1 </tspan>
+<tspan x="10" y="986">  │ ├─┬ babel-plugin-transform-es2015-classes@6.24.1 </tspan>
+<tspan x="10" y="1002">  │ │ ├── babel-helper-define-map@6.24.1 </tspan>
+<tspan x="10" y="1018">  │ │ ├── babel-helper-function-name@6.24.1 </tspan>
+<tspan x="10" y="1034">  │ │ ├── babel-helper-optimise-call-expression@6.24.1 </tspan>
+<tspan x="10" y="1050">  │ │ └── babel-helper-replace-supers@6.24.1 </tspan>
+<tspan x="10" y="1066">  │ ├── babel-plugin-transform-es2015-computed-properties@6.24.1 </tspan>
+<tspan x="10" y="1082">  │ ├── babel-plugin-transform-es2015-destructuring@6.23.0 </tspan>
+<tspan x="10" y="1098">  │ ├── babel-plugin-transform-es2015-duplicate-keys@6.24.1 </tspan>
+<tspan x="10" y="1114">  │ ├── babel-plugin-transform-es2015-for-of@6.23.0 </tspan>
+<tspan x="10" y="1130">  │ ├── babel-plugin-transform-es2015-function-name@6.24.1 </tspan>
+<tspan x="10" y="1146">  │ ├── babel-plugin-transform-es2015-literals@6.22.0 </tspan>
+<tspan x="10" y="1162">  │ ├── babel-plugin-transform-es2015-modules-amd@6.24.1 </tspan>
+<tspan x="10" y="1178">  │ ├─┬ babel-plugin-transform-es2015-modules-commonjs@6.24.1 </tspan>
+<tspan x="10" y="1194">  │ │ └── babel-plugin-transform-strict-mode@6.24.1 </tspan>
+<tspan x="10" y="1210">  │ ├─┬ babel-plugin-transform-es2015-modules-systemjs@6.24.1 </tspan>
+<tspan x="10" y="1226">  │ │ └── babel-helper-hoist-variables@6.24.1 </tspan>
+<tspan x="10" y="1242">  │ ├── babel-plugin-transform-es2015-modules-umd@6.24.1 </tspan>
+<tspan x="10" y="1258">  │ ├── babel-plugin-transform-es2015-object-super@6.24.1 </tspan>
+<tspan x="10" y="1274">  │ ├─┬ babel-plugin-transform-es2015-parameters@6.24.1 </tspan>
+<tspan x="10" y="1290">  │ │ ├── babel-helper-call-delegate@6.24.1 </tspan>
+<tspan x="10" y="1306">  │ │ └── babel-helper-get-function-arity@6.24.1 </tspan>
+<tspan x="10" y="1322">  │ ├── babel-plugin-transform-es2015-shorthand-properties@6.24.1 </tspan>
+<tspan x="10" y="1338">  │ ├── babel-plugin-transform-es2015-spread@6.22.0 </tspan>
+<tspan x="10" y="1354">  │ ├─┬ babel-plugin-transform-es2015-sticky-regex@6.24.1 </tspan>
+<tspan x="10" y="1370">  │ │ └── babel-helper-regex@6.24.1 </tspan>
+<tspan x="10" y="1386">  │ ├── babel-plugin-transform-es2015-template-literals@6.22.0 </tspan>
+<tspan x="10" y="1402">  │ ├── babel-plugin-transform-es2015-typeof-symbol@6.23.0 </tspan>
+<tspan x="10" y="1418">  │ ├─┬ babel-plugin-transform-es2015-unicode-regex@6.24.1 </tspan>
+<tspan x="10" y="1434">  │ │ └─┬ regexpu-core@2.0.0 </tspan>
+<tspan x="10" y="1450">  │ │   ├── regenerate@1.3.2 </tspan>
+<tspan x="10" y="1466">  │ │   ├── regjsgen@0.2.0 </tspan>
+<tspan x="10" y="1482">  │ │   └─┬ regjsparser@0.1.5 </tspan>
+<tspan x="10" y="1498">  │ │     └── jsesc@0.5.0 </tspan>
+<tspan x="10" y="1514">  │ └─┬ babel-plugin-transform-regenerator@6.24.1 </tspan>
+<tspan x="10" y="1530">  │   └── regenerator-transform@0.9.11 </tspan>
+<tspan x="10" y="1546">  ├── colors@1.1.2 </tspan>
+<tspan x="10" y="1562">  ├─┬ commander@2.9.0 </tspan>
+<tspan x="10" y="1578">  │ └── graceful-readlink@1.0.1 </tspan>
+<tspan x="10" y="1594">  ├── fibers@1.0.15 </tspan>
+<tspan x="10" y="1610">  ├─┬ source-map-support@0.4.0  (git+https://github.com/Sage/node-source-map-support.git#ca4cf25\</tspan>
+<tspan x="10" y="1626">ab660a84cbf489c73572f6451eafddc6e)</tspan>
+<tspan x="10" y="1642">  │ └─┬ source-map@0.1.32 </tspan>
+<tspan x="10" y="1658">  │   └── amdefine@1.0.1 </tspan>
+<tspan x="10" y="1674">  ├─┬ streamline-runtime@1.1.1 </tspan>
+<tspan x="10" y="1690">  │ └── regenerator-runtime@0.10.3 </tspan>
+<tspan x="10" y="1706">  └── typescript@2.2.2</tspan>
+</text>
+</svg>
